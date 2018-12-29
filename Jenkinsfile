@@ -1,14 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage ('Build Servlet Project') {
+        stage ('Initialize') {
             steps {
                 /*For windows machine */
-               bat  'mvn clean package'
+               sh '''
+               echo "PATH = ${PATH}"
+               echo "M2_HOME =  ${M2_HOME}"
+               '''
 
                 /*For Mac & Linux machine */
                // sh  'mvn clean package'
             }
+        }
 
             post{
                 success{
