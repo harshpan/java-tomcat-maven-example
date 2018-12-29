@@ -14,12 +14,12 @@ pipeline {
             }
         }
       stage ('Build') {
-        steps{
+        steps {
         echo "Hello World"
         
         }
         stage ('Deploy') {
-        steps{
+        steps {
         echo "Deploy and Artifacts"
         
         }
